@@ -8,7 +8,7 @@ if [ $1 ]; then
   npm config set registry https://registry.npm.taobao.org
   echo "配置仓库更新密钥..."
   mkdir -p /root/.ssh
-  echo -e ${KEY} >/root/.ssh/id_rsa
+  # echo -e ${KEY} >/root/.ssh/id_rsa
   chmod 600 /root/.ssh/id_rsa
   ssh-keyscan github.com >/root/.ssh/known_hosts
   echo "容器启动，拉取脚本仓库代码..."
