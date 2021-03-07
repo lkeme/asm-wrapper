@@ -3,7 +3,7 @@ LABEL maintainer="clamp <imclamp@foxmail.com>"
 
 ENV ASM_DIR=/AutoSignMachine \
     ASM_WRAPPER_URL=https://github.com/lkeme/asm-wrapper.git \
-    ASM_WRAPPER_BRANCH=main \
+    ASM_WRAPPER_BRANCH=dev \
     enable_unicom=true
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
