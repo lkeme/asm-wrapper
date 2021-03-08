@@ -29,6 +29,10 @@ cd ${ASM_DIR}/scripts
 git reset --hard HEAD
 git fetch --all
 git reset --hard origin/${ASM_SCRIPTS_BRANCH}
+if [ -f "${ASM_DIR}/scripts/package-lock.json" ]; then
+    echo "删除package-lock.json"
+    rm package-lock.json
+fi
 
 echo "npm install 安装最新依赖"
 npm install -s --prefix ${ASM_DIR}/scripts >/dev/null
