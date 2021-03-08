@@ -32,8 +32,9 @@ git reset --hard origin/${ASM_SCRIPTS_BRANCH}
 
 echo "npm install 安装最新依赖"
 npm install -s --prefix ${ASM_DIR}/scripts >/dev/null
-
+echo "设置环境变量文件1"
 mergedListFile="${ASM_DIR}/merged_list_file.sh"
+echo "设置环境变量文件2"
 envFile="${ASM_DIR}/scripts/config/.env"
 echo "定时任务文件路径为 ${mergedListFile}"
 echo '' >${mergedListFile}
