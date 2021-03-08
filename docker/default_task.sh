@@ -79,7 +79,7 @@ if [ $ENABLE_UNICOM ]; then
       done
     else
       # echo "*/30 7-22 * * * sleep \$((RANDOM % 120)); node ${ASM_DIR}/scripts/index.js unicom >> ${ASM_DIR}/logs/unicom.log 2>&1 &" >>${mergedListFile}
-      echo "*/30 0-22 * * * sleep \$((RANDOM % 120)); node ${ASM_DIR}/scripts/index.js unicom --cookies ${cookies} --user ${user} --password ${password} --appid ${appid} | tee  ${ASM_DIR}/logs/unicom.log" >>${mergedListFile}
+      echo "*/30 7-22 * * * sleep \$((RANDOM % 120)); node ${ASM_DIR}/scripts/index.js unicom --cookies ${cookies} --user ${user} --password ${password} --appid ${appid} | tee  ${ASM_DIR}/logs/unicom.log" >>${mergedListFile}
     fi
   else
     echo "未找到 .env配置文件，故不添加unicom定时任务。"
